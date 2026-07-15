@@ -45,7 +45,7 @@ void ipod_4g_button_int(void);
                 |BUTTON_SCROLL_BACK|BUTTON_PLAY)
 
     /* Remote control's buttons */
-#ifdef IPOD_ACCESSORY_PROTOCOL
+#if defined(IPOD_ACCESSORY_PROTOCOL) || defined(HAVE_MIKEY_REMOTE)
 #define BUTTON_RC_DOWN      0x01000000
 #define BUTTON_RC_UP        0x00800000
 #define BUTTON_RC_SELECT    0x00400000

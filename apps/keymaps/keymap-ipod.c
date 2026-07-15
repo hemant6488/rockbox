@@ -323,6 +323,13 @@ static const struct button_mapping remote_button_context_standard[]  = {
     { ACTION_STD_QUICKSCREEN,   BUTTON_RC_MENU|BUTTON_REPEAT,          BUTTON_RC_MENU },
     { ACTION_STD_CONTEXT,       BUTTON_RC_SELECT|BUTTON_REPEAT,        BUTTON_RC_SELECT },
 
+#ifdef HAVE_VOLUME_IN_LIST
+    { ACTION_LIST_VOLUP,        BUTTON_RC_VOL_UP,                   BUTTON_NONE },
+    { ACTION_LIST_VOLUP,        BUTTON_RC_VOL_UP|BUTTON_REPEAT,     BUTTON_NONE },
+    { ACTION_LIST_VOLDOWN,      BUTTON_RC_VOL_DOWN,                 BUTTON_NONE },
+    { ACTION_LIST_VOLDOWN,      BUTTON_RC_VOL_DOWN|BUTTON_REPEAT,   BUTTON_NONE },
+#endif
+
     LAST_ITEM_IN_LIST
 }; /* remote_button_context_standard */
 
@@ -354,6 +361,13 @@ static const struct button_mapping remote_button_context_tree[]  = {
     { ACTION_TREE_WPS,          BUTTON_RC_PLAY|BUTTON_REL,    BUTTON_RC_PLAY },
     { ACTION_TREE_STOP,         BUTTON_RC_PLAY|BUTTON_REPEAT, BUTTON_RC_PLAY },
     { ACTION_TREE_HOTKEY,       BUTTON_RC_SELECT|BUTTON_PLAY,   BUTTON_NONE },
+
+#ifdef HAVE_VOLUME_IN_LIST
+    { ACTION_LIST_VOLUP,        BUTTON_RC_VOL_UP,                   BUTTON_NONE },
+    { ACTION_LIST_VOLUP,        BUTTON_RC_VOL_UP|BUTTON_REPEAT,     BUTTON_NONE },
+    { ACTION_LIST_VOLDOWN,      BUTTON_RC_VOL_DOWN,                 BUTTON_NONE },
+    { ACTION_LIST_VOLDOWN,      BUTTON_RC_VOL_DOWN|BUTTON_REPEAT,   BUTTON_NONE },
+#endif
 
     LAST_ITEM_IN_LIST__NEXTLIST(CONTEXT_STD)
 }; /* remote_button_context_tree */
